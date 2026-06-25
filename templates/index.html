@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovoaFashion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">NovoaFashion</div>
+        <ul>
+            <li><a href="#">Hombre</a></li>
+            <li><a href="#">Mujer</a></li>
+            <li><a href="#">Niños</a></li>
+            <li><a href="#">Ofertas</a></li>
+        </ul>
+        <div class="nav-icons">
+          🔍 <a href="/carrito"> 🛒</a>
+          🔍 <a href="/carrito"> 🛒</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Nueva Colección 2026</h1>
+        <p>Estilo que habla por ti</p>
+        <a href="#" class="btn">Ver Colección</a>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section class="productos">
+        <h2>Lo más vendido</h2>
+        <div class="grid">
+<div class="grid">
+    <div class="card">
+        <img src="{{ url_for('static', filename='images/Crop 1.jpeg') }}" alt="Crop 1">
+        <h3>Crop 1</h3>
+        <p><S>
+        <div class="9"></div></p>
+        <a href="agregar/1"><button>Agregar al carrito</button></a>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='images/Crop 2.jpeg') }}" alt="Crop 2">
+        <h3>Crop 2</h3>
+        <p>$35.000</p>
+        <a href="agregar/2"><button>Agregar al carrito</button></a>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='images/Portada.jpeg') }}" alt="Portada">
+        <h3>Portada</h3>
+        <p>$45.000</p>
+        <a href="agregar/3"><button>Agregar al carrito</button></a>
+    </div>
+</div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 NovoaFashion — Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
