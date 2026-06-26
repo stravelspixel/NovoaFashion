@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asimétrico - NovoaFashion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">NovoaFashion</div>
+        <ul>
+            <li><a href="/Damas">Damas</a></li>
+            <li><a href="/Asimetrico">Asimétrico</a></li>
+            <li><a href="/Crops">Crops</a></li>
+            <li><a href="/Overzize">Overzize</a></li>
+        </ul>
+        <div class="nav-icons">
+            🔍 <a href="/carrito">🛒</a>
+        </div>
+    </nav>
+
+    <section class="productos">
+        <h2>Asimétrico</h2>
+        {% if productos %}
+        <div class="grid">
+            {% for producto in productos %}
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/' + producto.imagen) }}" alt="{{ producto.nombre }}">
+                <h3>{{ producto.nombre }}</h3>
+                <p>${{ producto.precio }}</p>
+                <a href="/agregar/{{ producto.id }}"><button>Agregar al carrito</button></a>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p style="text-align:center; margin-top:50px;">Próximamente productos para asimétricos.</p>
+        {% endif %}
+    </section>
+
+    <footer>
+        <p>© 2026 NovoaFashion — Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
