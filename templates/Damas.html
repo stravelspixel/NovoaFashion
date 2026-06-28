@@ -8,14 +8,13 @@
 </head>
 <body>
     <nav>
-        <div class="logo">NovoaFashion</div>
+        <div class="logo"><a href="/" style="text-decoration: none; color: #000000;">NovoaFashion</a></div>
         <ul>
             <li><a href="/Damas">Damas</a></li>
             <li><a href="/Asimetrico">Asimétrico</a></li>
             <li><a href="/Crops">Crops</a></li>
             <li><a href="/Overzize">Overzize</a></li>
         </ul>
-        <div class="nav-icons">🔍 <a href="/carrito">🛒</a></div>
     </nav>
     <section class="productos">
         <h2>Damas</h2>
@@ -26,7 +25,6 @@
                 <img src="{{ url_for('static', filename='images/' + producto.imagen) }}" alt="{{ producto.nombre }}">
                 <h3>{{ producto.nombre }}</h3>
                 <p>${{ producto.precio }}</p>
-                <a href="/agregar/{{ producto.id }}"><button>Agregar al carrito</button></a>
             </div>
             {% endfor %}
         </div>
