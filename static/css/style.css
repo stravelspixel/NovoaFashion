@@ -161,3 +161,61 @@ footer {
     color: #fff;
     font-size: 13px;
 }
+
+/* RESPONSIVE MOVIL */
+@media (max-width: 768px) {
+    /* NAVBAR */
+    nav {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+/* HERO */
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* PRODUCTOS */
+    .productos {
+        padding: 40px 20px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    gap: 10px;
+  }
+
+  nav ul a {
+    font-size: 12px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+    .hero h1 {
+        font-size: 28px;
+    }
